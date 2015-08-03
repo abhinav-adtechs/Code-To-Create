@@ -1,0 +1,22 @@
+.fontawesome-icon-list .fa-hover {
+  line-height: 32px;
+  height: 32px;
+  padding-left: 10px;
+}
+.fontawesome-icon-list .fa-hover .fa {
+  width: 32px;
+  font-size: 14px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+}
+.fontawesome-icon-list .fa-hover:hover {
+  background: #62584e;
+  cursor: default;
+  color: #ffffff;
+}
+.fontawesome-icon-list .fa-hover:hover .fa {
+  font-size: 26px;
+  vertical-align: -4px;
+}
+

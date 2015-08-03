@@ -1,0 +1,25 @@
+#sidebar,
+#header,
+.box,
+#content .section-header,
+.sidebar-back {
+	display: none;
+}
+
+#content,
+#content .section-body {
+	padding: 0;
+}
+
+.box-printable {
+	display: block;
+}
+.box-printable .box-head {
+	display: none;
+}
+
+body,
+#content > section {
+	background-color: #ffffff;
+	border: 0;
+}
