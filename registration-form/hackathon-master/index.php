@@ -15,28 +15,59 @@ $name=$_POST['name'];
 $contact=$_POST['contact'];
 $email=$_POST['email'];
 $regno=$_POST['regno'];
-$abstract=$_POST['abstract'];
 $fieldOfInterest=$_POST['fieldOfInterest'];
-$techSkills=$_POST['techSkills'];
-$projects=$_POST['projects'];
-
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-
-$sql = "INSERT INTO registrations (name,email,contact,regno,abstract,field,tech_skills,projects)
-VALUES ('$name','$email','$contact','$regno','$abstract','$fieldOfInterest','$techSkills','$projects')";
-
+$sql = "INSERT INTO registrations (name,email,contact,regno,field)
+VALUES ('$name','$email','$contact','$regno','$fieldOfInterest')";
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
 $conn->close();
+//Abstract Upload....
+$target_dir='uploads/abstract/';
+$target_file=$target_dir.basename($_FILES['fileToUpload']['name']);
+$uploadOk=1;
+$FileType = pathinfo($target_file,PATHINFO_EXTENSION);
+if($FileType != "pdf" && $FileType != "docx" && $FileType != "doc") 
+	{
+    	 $uploadOk = 0;
+	}
+$flag=0;
+$target_file=$target_dir.basename($regno).'.'.$FileType;
+if ($uploadOk!=0) {
+	if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+       // echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+    	$flag=1;
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+	# code...
+}
+// File to upload for Technical skills
+$target_dir='uploads/tech_skills/';
+$target_file=$target_dir.basename($_FILES['techfileToUpload']['name']);
+$uploadOk=1;
+$FileType = pathinfo($target_file,PATHINFO_EXTENSION);
+if($FileType != "pdf" && $FileType != "docx" && $FileType != "doc") 
+	{
+    	 $uploadOk = 0;
+	}
+$target_file=$target_dir.basename($regno).'.'.$FileType;
+if ($uploadOk!=0) {
+	if (move_uploaded_file($_FILES["techfileToUpload"]["tmp_name"], $target_file)) {
+       $flag=0;// echo "The file ". basename( $_FILES["techfileToUpload"]["name"]). " has been uploaded.";
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+	# code...
+}
 }
 ?>
 
@@ -92,7 +123,7 @@ $conn->close();
 						<br/>
 						<span class="text-lg text-bold text-primary">ACM-HACK REGISTRATION</span>
 						<br/><br/>
-						<form class="form floating-label form form-validate floating-label" action="index.php" accept-charset="utf-8" method="post">
+						<form enctype="multipart/form-data" class="form floating-label form form-validate floating-label" action="index.php" accept-charset="utf-8" method="post">
 							<div class="form-group">
 								<input type="text" class="form-control" id="name" name="name" required>
 								<label for="name">Name</label>
@@ -122,7 +153,19 @@ $conn->close();
 									</select>
 									<label for="select1">Field Of Interest</label>
 								</div>
+								<div class="form-group">
 
+									Abstract	<input type="file" name="fileToUpload" id="fileToUpload">
+									<br>
+								</div>
+
+
+								<div class="form-group">
+
+									Upload Resume	<input type="file" name="techfileToUpload" id="techfileToUpload">
+									<br>
+								</div>
+								<!--
 							<div class="form-group">
 									<textarea name="abstract" id="textarea1" class="form-control" rows="3" required></textarea>
 									<label for="textarea1">Abstract</label>
@@ -131,11 +174,11 @@ $conn->close();
 							<div class="form-group">
 									<textarea name="techSkills" id="textarea2" class="form-control" rows="3" required></textarea>
 									<label for="textarea2">Technical Skills</label>
-								</div>
 							<div class="form-group">
 									<textarea name="projects" id="textarea3" class="form-control" rows="3" required></textarea>
 									<label for="textarea3">Projects worked upon</label>
 								</div>
+							-->
 							<div class="row">
 								<div class="col-xs-6 text-left">
 									
