@@ -54,7 +54,7 @@ $conn->close();
 		<!-- END META -->
 
 		<!-- BEGIN STYLESHEETS -->
-				<link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
+		    <link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
 			<link type="text/css" rel="stylesheet" href="assets/css/modules/materialadmin/css/theme-default/bootstrap94be.css?1422823238" />
 
 			<link type="text/css" rel="stylesheet" href="assets/css/modules/materialadmin/css/theme-default/materialadminb0e2.css?1422823243" />
@@ -71,7 +71,7 @@ $conn->close();
 		<!--[if lt IE 9]>
 	<script type="text/javascript" src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/utils/html5shiv.js?1422823601"></script>
 	<script type="text/javascript" src="http://www.codecovers.eu/assets/js/modules/materialadmin/libs/utils/respond.min.js?1422823601"></script>
-    <![endif]-->
+    <![endif]
 	</head>
 
 	
@@ -93,10 +93,15 @@ $conn->close();
 						<span class="text-lg text-bold text-primary">ACM-HACK REGISTRATION</span>
 						<br/><br/>
 						<form class="form floating-label form form-validate floating-label" action="index.php" accept-charset="utf-8" method="post">
-							<div class="form-group">
-								<input type="text" class="form-control" id="name" name="name" required>
-								<label for="name">Name</label>
-							</div>
+							<div class="form-group floating-label">
+									<div class="input-group">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-user fa-lg"></span></span>
+										<div class="input-group-content">
+											<input type="text" class="form-control" id="username10">
+											<label for="username10">Username</label>
+										</div>
+									</div>
+								</div>
 							<div class="form-group">
 								<input type="text" class="form-control" id="regno" name="regno" required>
 								<label for="regno">Registration Number</label>
