@@ -1,3 +1,5 @@
+
+
 #awwwards{position:absolute;top:30px;width:90px;height:135px;text-indent:-666em;overflow:hidden;z-index:999;-webkit-transition:all 1s ease;transition:all 1s ease}
 #awwwards.top{top:20px}
 #awwwards.left{left:0}
@@ -19,10 +21,24 @@
 #awwwards.honorable.green.left a{background-image:url(../../../../themes/trustnet/assets/css/ribbons/awwwards_honorable_green_left%402x.png)}
 #awwwards.honorable.green.right a{background-image:url(../../../../themes/trustnet/assets/css/ribbons/awwwards_honorable_green_right%402x.png)}}
 html,body,body div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video
-{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;font-family: Roboto ;}
+{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;font-family: Roboto, Roboto Condensed, monospace, sans-serif ;}
 article,aside,figure,footer,header,hgroup,nav,section{display:block}
 html{overflow-y:scroll}
+.textmain{
+	font-family: Roboto, Roboto Condensed, monospace, sans-serif ;
+	font-size: 22px;
+	color: black;
+}
+@media screen only and (max-width:768px){
+	.logomain{
+		width:300px !important;
+		height:300px !important;
+	}
+	.textmain{
+		font-size: 1.2em
+	}
 
+}
 blockquote,q{quotes:none}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 pre,code,kbd,samp{font-family:monospace,sans-serif}
@@ -102,3 +118,6 @@ height:1000px;
     border: 2px solid yellow;
 
 }
+.vertical-line{
+	border-left: 7px solid black ;
+} 
