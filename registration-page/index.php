@@ -97,8 +97,13 @@ $conn->close();
 									<div class="input-group">
 										<span class="input-group-addon"><span class="glyphicon glyphicon-user fa-lg"></span></span>
 										<div class="input-group-content">
+<<<<<<< HEAD:registration-page/index.php
+											<input type="text" class="form-control" id="name" name="name" required>
+											<label for="name">Name</label>
+=======
 											<input type="text" class="form-control" id="username10">
 											<label for="username10">Username</label>
+>>>>>>> 44b5b804acb1a957c746de00837f2f9ffd3fe8f9:registration-page/index.php
 										</div>
 									</div>
 								</div>
