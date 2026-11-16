@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-label="Code To Create — the website for ACM-VIT's first hackathon (2015)">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070a12"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="160" cy="40" r="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F59E0B" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="1180" cy="360" r="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3B82F6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="motif" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+    </pattern>
+    <clipPath id="card"><rect width="1280" height="360" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1280" height="360" fill="url(#bg)"/>
+    <rect width="1280" height="360" fill="url(#grid)"/>
+    <rect width="1280" height="360" fill="url(#glowA)">
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="7s" repeatCount="indefinite"/>
+    </rect>
+    <rect width="1280" height="360" fill="url(#glowB)"/>
+
+    <!-- MOTIF: laptop with </> on screen, plus an hourglass for the overnight hack -->
+    <g id="motif-group" fill="none" stroke="url(#motif)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <rect x="868" y="92" width="240" height="152" rx="12" fill="#ffffff" fill-opacity="0.03"/>
+      <rect x="884" y="108" width="208" height="120" rx="4" stroke-opacity="0.35"/>
+      <path d="M850 256 L 1126 256 L 1144 276 L 846 276 Z" fill="#ffffff" fill-opacity="0.03"/>
+      <path d="M960 266 L 1030 266" stroke="#F59E0B" stroke-opacity="0.6"/>
+      <path d="M950 140 L 920 168 L 950 196" stroke-width="5"/>
+      <path d="M1026 140 L 1056 168 L 1026 196" stroke-width="5"/>
+      <path d="M1000 132 L 976 204" stroke="#F59E0B" stroke-width="5"/>
+      <path d="M1158 104 L 1210 104 M 1158 248 L 1210 248" stroke-width="4"/>
+      <path d="M1164 104 C 1164 146 1182 160 1182 176 C 1182 192 1164 206 1164 248" stroke-opacity="0.8"/>
+      <path d="M1204 104 C 1204 146 1186 160 1186 176 C 1186 192 1204 206 1204 248" stroke-opacity="0.8"/>
+      <path d="M1172 132 L 1196 132 L 1184 156 Z" fill="#F59E0B" fill-opacity="0.5" stroke="none"/>
+      <path d="M1170 242 L 1198 242 L 1184 222 Z" fill="#F59E0B" fill-opacity="0.9" stroke="none"/>
+      <path d="M1184 180 L 1184 214" stroke="#F59E0B" stroke-width="2" stroke-dasharray="2 6"/>
+      <circle cx="900" cy="62" r="3" fill="#F59E0B" stroke="none"/>
+      <circle cx="1080" cy="52" r="2.5" fill="#3B82F6" stroke="none"/>
+      <circle cx="1140" cy="300" r="3" fill="#3B82F6" stroke="none"/>
+      <circle cx="878" cy="306" r="2" fill="#F59E0B" stroke="none"/>
+    </g>
+  </g>
+
+  <text x="80" y="168" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="80" font-weight="800" letter-spacing="-2" fill="url(#title)">Code To Create</text>
+  <text x="84" y="220" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="27" font-weight="500" fill="#cbd5e1">The website for ACM-VIT's first hackathon (2015)</text>
+
+  <!-- CHIPS: one <g> per chip; width = chars*10.85 + 32; 14px gap between chips -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#e2e8f0">
+    <g transform="translate(84 256)">
+      <rect width="238" height="38" rx="19" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.16"/>
+      <text x="16" y="25">HTML · CSS · jQuery</text>
+    </g>
+    <g transform="translate(336 256)">
+      <rect width="151" height="38" rx="19" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.16"/>
+      <text x="16" y="25">PHP + MySQL</text>
+    </g>
+    <g transform="translate(501 256)">
+      <rect width="173" height="38" rx="19" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.16"/>
+      <text x="16" y="25">graVITas 2015</text>
+    </g>
+    <g transform="translate(688 256)">
+      <rect width="108" height="38" rx="19" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.16"/>
+      <text x="16" y="25">Archive</text>
+    </g>
+  </g>
+
+  <rect x="0.5" y="0.5" width="1279" height="359" rx="28" fill="none" stroke="#ffffff" stroke-opacity="0.1"/>
+</svg>
