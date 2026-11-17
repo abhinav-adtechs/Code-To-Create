@@ -159,7 +159,7 @@ PR #5 ("Proper routing done for Home page") switched the landing page's nav to f
 
 ## Known issues
 
-These are documented as found, and left unchanged in this archive. Several are tracked in the README roadmap.
+These are documented as found; resolved items are marked below. Several are tracked in the README roadmap.
 
 | #   | Issue                                                                                                                                                                                                    | Where                                                           |
 | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
@@ -170,7 +170,7 @@ These are documented as found, and left unchanged in this archive. Several are t
 | 5   | PHP contact page's form posts to a non-existent `contactUs.php`                                                                                                                                          | `contact-us/index.php:119`                                      |
 | 6   | Register buttons point to `../hackathon-master/reg-temp/…` (depends on the deploy folder name), and `reg-temp` is a sign-in placeholder; `registration-page/` isn't linked from anywhere                 | `index.html:58`, `index.html:503`                               |
 | 7   | Landing-page nav links point to folders without an `index.html`                                                                                                                                          | `index.html:75-87`                                              |
-| 8   | Case-sensitive paths that only work on case-insensitive file systems: `new-assets/Splash_White.png` (file is `splash_white.png`), `wp-content/uploads/2015/05/conference.jpg` (file is `conference.JPG`) | `index.html:123`, `index.html:133`, `index.html:153`            |
+| 8   | Fixed: the conference image and two logo references now use the exact filename case (`conference.JPG`, `splash_white.png`). The two logo references are in commented-out HTML. | `index.html:123`, `index.html:133`, `index.html:153`            |
 | 9   | Missing scripts and leftovers from the mirror: `wb-content/try.js`, `/jquery-1.11.3.js`, `../use.typekit.net/…`, links to `badges.html`, `careers/`, `jobs/`, `news/`, `xmlrpc*.php`                     | `index.html` head and nav, sub-page heads                       |
 | 10  | A background image uses an absolute `file:///C:/…` path from the original author's machine                                                                                                               | `index.html:340`                                                |
 | 11  | Registration page loads a template script from an absolute `/assets/...` path                                                                                                                            | `registration-page/index.php:168`                               |

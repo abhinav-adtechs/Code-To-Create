@@ -4,6 +4,12 @@ All notable changes to this project are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Version numbers follow the "Update x.y" names used in the 2015 commits. Entries come from the git history; short hashes are in parentheses, and pull-request numbers are given where they exist.
 
+## [Unreleased]
+
+### Fixed
+
+- Correct the landing page's conference image path and two logo references to match the filenames' case (part of #12).
+
 ## [2.3.0] - 2015-08-16
 
 The final build: back ends, the schedule page and routing.
